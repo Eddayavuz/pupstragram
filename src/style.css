@@ -1,0 +1,131 @@
+#app{
+   position: relative;
+    margin: auto;
+    text-align: center;
+    background: url();
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 520px 120px 1fr;
+    grid-template-areas:"title title""card card""nope fav""favourites favourites";
+    height: 100vh;
+  }
+  
+  .card {
+    grid-area: card;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    margin: auto;
+    border-radius: 10px;
+    outline: 10px solid white;
+    object-fit: cover;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .title {
+    grid-area: title;
+    margin: .5em;
+    font-size: clamp(40px,5vw,3rem);
+    font-family:'Fredoka One', cursive;
+    letter-spacing: 1px;
+    text-align: center;
+    color: tomato;
+  }
+  
+  
+  
+  button {
+      width: 70px;
+      height: 70px;
+      margin: 20px 5px;
+      border: 8px solid white;
+      border-radius: 50%;
+      color: transparent;
+      cursor: pointer;
+      box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+    background: url(url.goes.here) #f2f2f2;
+  }
+  
+  .nope {
+      grid-area: nope;
+      background: url('https://cdn.glitch.me/381dc777-702c-41b2-82aa-cac2e30d38de%2Funchecked.png') tomato center no-repeat;
+      background-size: 20px;
+      justify-self: end;
+    }
+  .remove {
+      position: absolute;
+      top: -10px;
+      right: -14px;
+      height: 30px;
+      width: 30px;
+      margin: 0;
+      border: 2px solid white;
+      background: url('https://cdn.glitch.me/381dc777-702c-41b2-82aa-cac2e30d38de%2Funchecked.png') tomato center no-repeat;
+      background-size: 10px;
+  }
+    
+    .nope:hover,
+    .remove:hover {
+      background-color: #da553d;
+    }
+    
+    .fav {
+      grid-area: fav;
+      background: url('https://cdn.glitch.me/381dc777-702c-41b2-82aa-cac2e30d38de%2Fchecked%20(1).png') no-repeat center #63dd9a;
+      background-size: 26px;
+     
+    }
+    
+    .fav:hover {
+      background-color: #51c384;
+    }
+  
+    
+  .favs {
+      grid-area: favourites;
+  /*     overflow-y: scroll; */
+  }
+  .favsList {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .favsItem {
+      position: relative;
+      list-style: none;
+      margin: 15px;
+  }
+  
+  .favsImg {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+     border: 2px solid white;
+  }
+  
+  
+  h2 {
+      position: sticky;
+      top: 0;
+      margin: 0 2rem;
+      padding: 1em;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      text-align: center;
+      color: tomato;
+      background-color: white;
+      z-index: 1;
+  }
+  
